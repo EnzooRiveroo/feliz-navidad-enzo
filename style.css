@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Quicksand:wght@300;500;700&display=swap');
+
+:root {
+    --christmas-red: #d42426;
+    --christmas-green: #165b33;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: radial-gradient(circle at center, #1a472a 0%, #071a0f 100%);
+    overflow-x: hidden;
+    color: white;
+    min-height: 100vh;
+}
+
+.font-christmas {
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+/* GLASS REFINADO */
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+#snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.content-layer {
+    position: relative;
+    z-index: 10;
+}
+
+.floating {
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(3deg);
+    }
+}
+
+/* SCROLL ESTETICO */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #071a0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #165b33;
+    border-radius: 10px;
+}
